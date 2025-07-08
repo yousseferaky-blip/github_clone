@@ -1,0 +1,52 @@
+.explore-projects {
+  padding: 4rem 1rem;
+  background-color: var(--background-color);
+}
+
+.explore-projects .project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.explore-projects .project-card {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1rem;
+  transition: 0.3s;
+}
+
+.explore-projects .project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--primary-color);
+}
+
+.explore-projects .project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.explore-projects .project-header a{
+    color: var(--text-primary);
+}
+
+.explore-projects .project-description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.explore-projects .project-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.explore-projects .language {
+  font-weight: bold;
+}

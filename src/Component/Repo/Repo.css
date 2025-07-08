@@ -1,0 +1,146 @@
+
+.repositories{
+    margin-top: 80px;
+    padding: 5px 10px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.page-header h1 {
+  font-size: clamp(16px,4vw,48px);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.back-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.back-link:hover {
+  text-decoration: underline;
+  transform: translateX(-2px);
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+
+.repos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.repo-card {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow-small);
+}
+
+.repo-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--primary-color);
+}
+
+.repo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.repo-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: none;
+  flex: 1;
+}
+
+.repo-name:hover {
+  text-decoration: underline;
+}
+
+.external-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.external-link:hover {
+  color: var(--primary-color);
+}
+
+.repo-description {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+.repo-stats {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.language {
+  background: var(--color, var(--text-muted));
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.repo-stats .stat {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.repo-updated {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width:768px) {
+    .repositories{
+        margin-top: 180px;
+    }
+
+}
+
+@media screen and (max-width:380px) {
+    .repos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    .page-header {
+        flex-direction: column-reverse;
+        align-items: start;
+    }
+}

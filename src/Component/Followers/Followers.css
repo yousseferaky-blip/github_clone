@@ -1,0 +1,19 @@
+.followers{
+    margin-top: 80px;
+    padding: 5px 10px;
+}
+@media screen and (max-width:768px) {
+    .followers{
+        margin-top: 180px;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .followers-grid{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .followers-header{
+        flex-direction: column-reverse;
+        align-items: start;
+    }
+}

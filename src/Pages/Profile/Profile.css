@@ -1,0 +1,162 @@
+.profile {
+  padding: 2rem 1rem;
+  margin-top: 70px;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+
+.profile-info {
+  display: flex;
+  gap: 2rem;
+  flex: 1;
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--border-color);
+  box-shadow: var(--shadow-medium);
+}
+
+.profile-details {
+  flex: 1;
+}
+
+.profile-name {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.profile-username {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.profile-bio {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.profile-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.meta-item a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.meta-item a:hover {
+  text-decoration: underline;
+}
+
+.join-date {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.github-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+  box-shadow: var(--shadow-small);
+}
+
+.github-link:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.stat-card {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: var(--transition);
+  box-shadow: var(--shadow-small);
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--primary-color);
+}
+
+.stat-card svg {
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+@media screen and (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 80px;
+  }
+
+  .profile-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-meta {
+    justify-content: center;
+  }
+}
+

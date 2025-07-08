@@ -1,0 +1,111 @@
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--background-color);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: var(--transition);
+}
+
+.logo:hover {
+  color: var(--primary-color);
+}
+
+.search-form {
+  flex: 1;
+  max-width: 400px;
+  margin: 0 2rem;
+}
+
+.search-container {
+  position: relative;
+  width: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 12px 10px 40px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background: var(--surface-color);
+  color: var(--text-primary);
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.1);
+}
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border-color);
+  padding: 8px;
+  border-radius: var(--border-radius);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  background: var(--surface-color);
+  color: var(--primary-color);
+  transform: translateY(-1px);
+}
+
+@media screen and (max-width:768px) {
+   .header-container {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 20px;
+    gap: 1rem;
+  }
+  .search-form {
+    order: 2;
+    max-width: none;
+    margin: 0;
+    width: 100%;
+  }
+  .theme-toggle {
+    order: 1;
+    align-self: flex-end;
+  }
+}
